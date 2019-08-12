@@ -28,7 +28,7 @@ class Iter
   public:
     Iter()
     {
-        ptr = end = begin = NULL;
+        ptr = end = begin = nullptr;
         length = 0;
     }
     Iter(T *p, T *first, T *last)
@@ -88,7 +88,7 @@ class Iter
     // access.
     T &operator[](int i)
     {
-        if ((i < 0) || (i >= (end - begin)))
+        if ((i < 0) || (i >= length))
             throw OutOfRangeExc();
         return ptr[i];
     }
